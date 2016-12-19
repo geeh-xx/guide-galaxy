@@ -1,4 +1,4 @@
-package br.com.rangel.main;
+package br.com.rangel.app;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,16 +17,6 @@ import br.com.rangel.enums.Type;
  */
 public class Talk {
 	
-	public Talk(){
-		this.scan = new Scanner(System.in);
-		this.conversationLine = new ConversationLine();
-		this.eMessage = new ErrorMessage();
-		this.constantAssignments = new HashMap<String, String>();
-		this.computedLiterals = new  HashMap<String, String>();
-		this.output = new ArrayList<String>();
-	}
-	
-
 	private Scanner scan;
 	private ConversationLine conversationLine;
 	private ErrorMessage eMessage;
@@ -45,7 +35,15 @@ public class Talk {
 	 */
 	private ArrayList<String> output;
 	
-		
+	public Talk(){
+		this.scan = new Scanner(System.in);
+		this.conversationLine = new ConversationLine();
+		this.eMessage = new ErrorMessage();
+		this.constantAssignments = new HashMap<String, String>();
+		this.computedLiterals = new  HashMap<String, String>();
+		this.output = new ArrayList<String>();
+	}
+	
 	/**
 	 * This method reads the paragraph from the input console.
 	 * The input sequence can be terminated by a blank new line.<br>

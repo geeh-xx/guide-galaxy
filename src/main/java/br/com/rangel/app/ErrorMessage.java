@@ -1,4 +1,4 @@
-package br.com.rangel.main;
+package br.com.rangel.app;
 
 import br.com.rangel.enums.ErrorCodes;
 import br.com.rangel.util.Util;

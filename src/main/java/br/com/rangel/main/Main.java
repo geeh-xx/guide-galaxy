@@ -2,6 +2,7 @@ package br.com.rangel.main;
 
 import java.util.ArrayList;
 
+import br.com.rangel.app.Talk;
 import br.com.rangel.util.Util;
 
 

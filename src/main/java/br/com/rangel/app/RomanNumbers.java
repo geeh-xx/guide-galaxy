@@ -1,4 +1,4 @@
-package br.com.rangel.main;
+package br.com.rangel.app;
 
 import br.com.rangel.enums.ErrorCodes;
 import br.com.rangel.enums.Roman;
@@ -16,12 +16,10 @@ public static final ErrorMessage eMessage = new ErrorMessage();
 	public static String romanNumberValidator = "^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$";
 	
 	
-	private static  int getValueFromRomanChar(char romanChar)
-	{
+	private static  int getValueFromRomanChar(char romanChar){
 		int value = -1;
 		
-		switch(romanChar)
-		{
+		switch(romanChar){
 			case 'I' : value = Roman.I.getValue();
 						break;
 			case 'V' : value = Roman.V.getValue();
@@ -68,12 +66,11 @@ public static final ErrorMessage eMessage = new ErrorMessage();
 	 * @param roman String
 	 * @return boolean
 	 */
-	private static int validateRomanNumber(String roman)
+	public static int validateRomanNumber(String roman)
 	{
 		int result = 0;
 		
-		if(roman.matches(romanNumberValidator))
-		{
+		if(roman.matches(romanNumberValidator)){
 			result = 1;
 		}
 		
@@ -86,13 +83,11 @@ public static final ErrorMessage eMessage = new ErrorMessage();
 	 * @param roman
 	 * @return String
 	 */
-	private static String convert(String roman)
-	{
+	public static String convert(String roman){
 		int decimal = 0;
         int lastNumber = 0;
         
-		for(int i=roman.length()-1;i>=0;i--)
-		{
+		for(int i=roman.length()-1; i>=0; i--){
 			char ch = roman.charAt(i);
 			decimal = CheckRoman(getValueFromRomanChar(ch), lastNumber, decimal);
             lastNumber = getValueFromRomanChar(ch);

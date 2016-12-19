@@ -1,4 +1,4 @@
-package br.com.rangel.main;
+package br.com.rangel.app;
 
 import br.com.rangel.enums.Type;
 
@@ -8,6 +8,12 @@ import br.com.rangel.enums.Type;
  * @author Rangel Soares
  */
 public class ConversationLine {
+
+	public static String patternAssigned = "^([A-Za-z]+) is ([I|V|X|L|C|D|M])$";
+	public static String patternCredits = "^([A-Za-z]+)([A-Za-z\\s]*) is ([0-9]+) ([c|C]redits)$";
+	public static String patternHowMuch = "^how much is (([A-Za-z\\s])+)\\?$";
+	public static String patternHowMany= "^how many [c|C]redits is (([A-Za-z\\s])+)\\?$";
+	private LineFilter[] linefilter;
 
 	/**
 	 *Initializes the line filters, i.e the four type of lines
@@ -20,13 +26,6 @@ public class ConversationLine {
 		this.linefilter[3] = new LineFilter(Type.QUESTION_HOW_MANY, patternHowMany);
 		
 	}
-	
-	public static String patternAssigned = "^([A-Za-z]+) is ([I|V|X|L|C|D|M])$";
-	public static String patternCredits = "^([A-Za-z]+)([A-Za-z\\s]*) is ([0-9]+) ([c|C]redits)$";
-	public static String patternHowMuch = "^how much is (([A-Za-z\\s])+)\\?$";
-	public static String patternHowMany= "^how many [c|C]redits is (([A-Za-z\\s])+)\\?$";
-	private LineFilter[] linefilter;
-
 	
 	/**
 	 * method returns the line type for the a particular line

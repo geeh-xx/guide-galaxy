@@ -1,4 +1,4 @@
-package br.com.rangel.main;
+package br.com.rangel.app;
 
 import br.com.rangel.enums.Type;
 
@@ -10,21 +10,30 @@ import br.com.rangel.enums.Type;
  */
 public class LineFilter {
 
+		private Type type;
+		private String pattern;
+		
 		public LineFilter(Type type,String pattern){
 			this.type = type;
 			this.pattern = pattern;
 		}
-	
-		private Type type;
-		private String pattern;
 		
 		public String getPattern(){
 			return this.pattern;
 					
 		}
 		
+		public void setPattern(String pattern) {
+			this.pattern = pattern;
+		}
+		
 		public Type getType(){
 			return this.type;
 		}
+
+		public void setType(Type type) {
+			this.type = type;
+		}
+
 	
 }

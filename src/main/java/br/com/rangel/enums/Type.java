@@ -7,13 +7,13 @@ package br.com.rangel.enums;
  */
 public enum Type {
 
-		 ASSIGNED, 
-		 
-		 CREDITS, 
-		 
-		 QUESTION_HOW_MUCH, 
-		 
-		 QUESTION_HOW_MANY, 
-		 
-		 NOMATCH
+	 ASSIGNED, 
+	 
+	 CREDITS, 
+	 
+	 QUESTION_HOW_MUCH, 
+	 
+	 QUESTION_HOW_MANY, 
+	 
+	 NOMATCH
 }
